@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Materialize NavBar Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+</head>
+
+
+<body>
+
+
+<nav style="margin-top:10px;">
+    <div class="nav-wrapper white">
+        <a  class="" href="#" class="brand-logo"> <img style="margin-left:80px;" src="../images/logo-wide.png"> </a>
+    </div>
+</nav>
+
+<br><br>
+
+<div class ="container"  >
+
+    <div class="row card-panel white">
+
+        <div class="col s4 "> <img  src="../images/profile.png"  style="width:450; height:200px;margin-left:20px;"> </div>
+         <div class="col s8">
+             <div class="row">
+                 <div class="col s3" style=" font-size: 20px;">
+                     Hi <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.name}} !!</span>
+                 </div>
+            </div>
+             <div class="row">
+                 <div class="col s2" style=" font-size: 20px;"> Name </div>
+                 <div class="col s1 white-text"> asasa</div>
+                 <div class="col s3 teal-text"> <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.name}} </span></div>
+             </div>
+
+             <div class="row">
+                 <div class="col s2" style=" font-size: 20px;"> Password </div>
+                 <div class="col s1 white-text"> asasa</div>
+                 <div class="col s4 teal-text"> <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.password}} </span></div>
+             </div>
+             <div class="row">
+                 <div class="col s2" style=" font-size: 20px;"> Email </div>
+                 <div class="col s1 white-text"> asasa</div>
+                 <div class="col s4 teal-text"> <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.emailAddress}} </span></div>
+             </div>
+             <div class="row">
+                 <div class="col s2" style=" font-size: 20px;"> mobileNo </div>
+                 <div class="col s1 white-text"> asasa</div>
+                 <div class="col s3 teal-text"> <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.mobileNo}} </span></div>
+             </div>
+
+
+
+
+             <!-- <div class="col s3" style=" font-size: 20px;">
+                  Name   <span style="font-weight: bold; font-size: 20px;" class="teal-text"> {{ form.name}} !!</span>
+              </div>
+              <div class="col s1 white-text"> aa </div>
+              <div class="col s3 white-text"> {{ form.name}} </div>-->
+
+
+
+         </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('.materialboxed').materialbox();
+        });
+
+
+
+
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+        $('#modal1').modal('open');
+    </script>
+
+
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper white">
+        <a href="#" class="brand-logo"> <img style="margin-left:80px; margin-top: 8px;" src="../images/logo-wide.png"> </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"> <span class ="teal-text"> Home</span></a></li>
+            <li style="margin-right:100px;"><a href="badges.html"> <span class ="teal-text">About </span></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div style="height:590px;">
+
+
+
+    <div class="row" style="background-color: #eaeaea;">
+
+        <div class="col s1 white-text">
+            d
+        </div>
+        <div class="col s5 teal-text ">
+
+            <div class="row">
+                <p style="color:#000000; margin-top: 20px;" class="center">
+                    <span style="font-weight:700;font-size:30px;font-family:Droid Serif"> <b>Make An Appoinment  <span style="color:#00a3c8 "> Now!</span> </b></span>
+                </p>
+            </div>
+
+
+
+
+            <form class="card-panel" ng-submit = "submit()">
+                <div class="row ">
+                    <br>
+                    <div class="input-field col s10">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Username"  ng-model="form.userid"  id="name" type="text" class="validate" required>
+                        <label for="name">Name</label>
+                    </div>
+
+
+
+
+                    <div class="input-field col s10" style="margin-left:25px;">
+
+
+                        <select size="6" name="ngvalueselect" ng-model="form.disease" multiple>
+                            <option ng-repeat="option in arr" ng-value="option">{{option}}</option>
+                        </select>
+
+                        <!--<select ng-model="form.value" ng-options="x for x in arr">
+                        </select>-->
+
+                        <!--
+                        <select>
+                            <option value="" disabled selected>- Select Your Services -</option>
+                            <option value="Orthopaedics">Orthopaedics</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Dental">Dental</option>
+                            <option value="Haematology">Haematology</option>
+                            <option value="Blood Test">Blood Test</option>
+                            <option value="Emergency Care">Emergency Care</option>
+                            <option value="Outdoor Checkup">Outdoor Checkup</option>
+                            <option value="Cancer Service">Cancer Service</option>
+                            <option value="Pharmacy">Pharmacy</option>
+
+
+                        </select>
+-->
+<!--
+                        {{ form.value}}
+-->
+                        <label>Select Your Services</label>
+                    </div>
+
+                    <div class=" col s10" style="margin-left:25px;"   >
+                        <label for="chooseDate">date</label>
+
+                        <datepicker>
+                            <input   id="chooseDate" ng-model="form.date"  type="text" required/>
+                        </datepicker>
+
+                    </div>
+
+
+                    <div class="input-field col s10" style="margin-left:25px;">
+                        <textarea id="textarea1" class="materialize-textarea" ng-model="form.message" data-length="20"></textarea>
+                        <label for="textarea1">Enter Message</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                       <!-- <button class="btn waves-effect waves-light teal" type="submit" name="action">Book appointment</button>-->
+
+                        <button class="btn waves-effect waves-light teal" ng-click="submit()" type="submit" name="action"  data-target="modal1">appointment
+
+                        </button>
+                    </div>
+
+                </div >
+
+
+
+
+            </form>
+
+
+
+
+
+        </div>
+
+
+
+        <!-- second  -->
+        <div class="col s5">
+            <div class="row">
+                <div class="col s12" style="margin-left:60px;">
+
+                    <img class="center" src="../images/appointment.png"  style="width:450;">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div id="modal1" class="modal">
+    <div class="modal-content" style="height: 300px;;">
+        <h4>Appointment Status </h4>
+
+        <p ng-show="flag ==2 " style="margin-top: 100px; font-size: 20px;" class="teal-text center">
+            No More Appointment Are Available
+        </p>
+
+        <p ng-show="flag ==1 " style="margin-top: 100px; font-size: 20px;" class="teal-text center">
+            Your Appointment Number is :: &nbsp;&nbsp;&nbsp;&nbsp;{{appointmnetNo}}
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a  class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

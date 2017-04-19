@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+      <title>The Materialize NavBar Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">      
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+        $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
+
+     </script>
+    <style>
+        .increaseFont{
+            font-size: 20px;;
+        }
+
+
+    </style>
+
+
+
+    </head>
+
+
+<body>
+
+<ul id='demoDropdown' class='dropdown-content' style="margin-top: 60px;">
+
+    <li><a ng-click="showAppointment()">Show Appointment </a></li>
+
+</ul>
+ <nav style="margin-top:5px;">
+    <div class="nav-wrapper white">
+      <a href="#" class="brand-logo"> <img style="margin-left:80px;" src="../../../images/logo-wide.png"> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right:100px;">
+        <li><a ng-click="editProfile()"> <span class ="teal-text">Edit Profile </span></a></li>
+          <li><a ng-click="showProfile()"> <span class ="teal-text">Show Profile </span></a></li>
+          <li><a ng-click="showAppointments()"> <span class ="teal-text">Show appointments </span></a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+<br>
+<br><br>
+
+
+
+
+     <div class="row" >
+         <div class="col s2 white-text">aa </div>
+         <div class="col s2 card-panel white-text hoverable teal center-align increaseFont"  ng-click="orthopedic()">
+              <span> <br>Orthopedic <br><br> </span>
+         </div>
+         <div class="col s1 white-text"> aa</div>
+         <div class="col s2 card-panel white-text hoverable teal center-align increaseFont" ng-click="cardiology()">
+             <br>Cardiology<br><br>
+         </div>
+         <div class="col s1 white-text"> aa</div>
+         <div class="col s2 card-panel white-text hoverable teal center-align increaseFont" ng-click="neurology()">
+             <br>Neurology<br><br>
+         </div>
+    </div>
+
+<div class="row" >
+    <div class="col s2 white-text">aa </div>
+    <div class="col s2 card-panel  white-text hoverable teal center-align increaseFont"  ng-click="dental()">
+        <br>Dental<br><br>
+    </div>
+    <div class="col s1 white-text"> aa</div>
+    <div class="col s2 card-panel white-text hoverable teal center-align increaseFont" ng-click="haematology()">
+        <br>Haematology<br><br>
+    </div>
+    <div class="col s1 white-text"> aa</div>
+    <div class="col s2 card-panel white-text hoverable teal center-align increaseFont" ng-click="cancer()">
+        <br>Cancer Service<br><br>
+    </div>
+</div>
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

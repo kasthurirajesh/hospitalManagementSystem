@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <link type="text/css" rel="stylesheet" href="../css_files/adminDashBoard.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/adminDashBoard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>
+
+
+<body>
+
+<ul id="slide-out" class="side-nav fixed z-depth-2">
+    <li class="center no-padding">
+        <div class="indigo darken-2 white-text" style="height: 128px;">
+            <div class="row">
+                <img style="margin-top: 3%;" width="100" height="100" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" class="circle responsive-img" />
+
+                <p style="margin-top: -11%;">
+                    ADMIN
+                </p>
+            </div>
+        </div>
+    </li>
+
+    <li id="dash_dashboard"><a class="waves-light" href="#!"><b>----------Admin Dashboard----------</b></a></li>
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <li id="dash_users">
+            <div id="dash_users_header" class="collapsible-header waves-light" data-collapsible="accordion"><b>Patients</b></div>
+            <div id="dash_users_body" class="collapsible-body">
+                <ul>
+                    <li id="users_seller">
+                        <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+                    </li>
+
+                    <li id="users_customer">
+                        <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        -->
+        <li id="dash_products">
+            <div id="dash_products_header" class="collapsible-header waves-light"><b>Nurse</b></div>
+            <div id="dash_products_body" class="collapsible-body">
+                <ul>
+                    <li id="products_product">
+                        <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+                        <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</ul>
+
+<header>
+    <ul class="dropdown-content" id="user_dropdown">
+        <li><a class="indigo-text" href="#!">Profile</a></li>
+        <li><a class="indigo-text" href="#!">Logout</a></li>
+    </ul>
+
+    <nav class="indigo" role="navigation">
+        <div class="nav-wrapper">
+            <a data-activates="slide-out" class="button-collapse show-on" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" /></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class='material-icons'>account_circle</i></a>
+                </li>
+            </ul>
+
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+
+    <nav>
+        <div class="nav-wrapper indigo darken-2">
+            <a style="margin-left: 20px;" class="breadcrumb" href="#!">Admin</a>
+            <a class="breadcrumb" href="#!">Index</a>
+
+            <div style="margin-right: 20px;" id="timestamp" class="right"></div>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+<br>
+    <div class="row card-panel">
+        <form class="col s12" ng-submit="submit()">
+            <div class="row">
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input placeholder="Username" ng-model="form.userId"  id="name" type="text" class="active validate" required>
+                    <label for="name">Username</label>
+                </div>
+                <div class="input-field col s1">
+
+                </div>
+                <div class="input-field col s5 ">
+                    <i class="material-icons prefix">lock-outline</i>
+                    <label for="password">Password</label>
+                    <input id="password"  ng-model="form.pass" type="password" placeholder="Password" class="validate" required>
+                </div>
+            </div>
+
+            <div class="row ">
+
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input placeholder="Username"  ng-model="form.name"  id="name" type="text" class="validate" required>
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="col s1">
+                    <span class="white-text">wdvsd</span>
+                </div>
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">phone</i>
+                    <label for="password">mobileNo</label>
+                    <input id="password"  ng-model="form.phoneNo" type="number" placeholder="mobile No" class="validate" required>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">email</i>
+                    <input placeholder="email"  ng-model="form.emailAddress" id="name" type="email" class="active validate" required>
+                    <label for="name">email</label>
+                </div>
+
+
+                <div class="input-field col s1">
+
+                </div>
+                <div class="input-field col s5" style="margin-left:20px;">
+
+                    <label for="address">Address</label>
+                    <input id="address" ng-model="form.address" type="text" placeholder="Address" class="validate" required>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-field col s5" style="margin-left: 20px;">
+                    <!--<i class="material-icons prefix">email</i>-->
+                    <input placeholder="salary"  ng-model="form.salary" id="name" type="number" class="active validate" required>
+                    <label for="name">salary</label>
+                </div>
+
+
+                <div class="input-field col s1">
+
+                </div>
+                <div class="input-field col s5" style="margin-left:20px;">
+
+                    <label for="address">Specialist</label>
+                    <input id="address" ng-model="form.specialist" type="text" placeholder="Specialist" class="validate" required>
+                </div>
+
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-field col s5" style="margin-left:25px; margin-top: -10px;">
+
+                    <input  class="with-gap" ng-model="form.gender"  value="male" name="group1" type="radio" id="test1"  required/>
+                    <label for="test1" class="teal-text" style="font-size: 16px;"> Male</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="with-gap" ng-model="form.gender" value="female" name="group1" type="radio" id="test2" required />
+                    <label for="test2" class="teal-text" style="font-size: 16px;" >FeMale</label>
+
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 center">
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div >
+
+
+
+
+
+        </form>
+    </div>
+    </main>
+</body>
+
+</html>
