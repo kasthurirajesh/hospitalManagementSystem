@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+      <title>The Materialize NavBar Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>    
+      
+      <script type="text/javascript">
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+
+        $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
+
+     </script>
+
+
+    </head>
+
+
+<body>
+
+
+ <nav style="margin-top:10px;">
+    <div class="nav-wrapper white">
+      <a href="#" class="brand-logo"> <img style="margin-left:80px;" src="../../../images/logo-wide.png"> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right:50px;">
+        <li><a href="sass.html"> <span class ="teal-text"> Sass</span></a></li>
+        <li><a href="badges.html"> <span class ="teal-text">Components </span></a></li>
+        <li><a href="collapsible.html"> <span class ="teal-text">JavaScript </span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+<br>
+
+<div class ="container ">
+
+   <div class="row card-panel">
+         <form class="col s12" ng-submit="submit()">
+
+             <!-- minimum size is 6 and alpha numeric -->
+             <div class="row">
+               <div class="input-field col s5">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input placeholder="Username" ng-model="form.userId" pattern="[a-zA-Z0-9]{6,}"   id="name" type="text" class="active validate" required>
+                  <label for="name">Username</label>
+               </div>
+               <div class="input-field col s1">     
+                        
+               </div>
+
+                <!-- passwowrd is alpha numeric minimum size 6-->
+               <div class="input-field col s5 ">     
+                 <i class="material-icons prefix">lock-outline</i>
+                  <label for="password">Password</label>
+                  <input id="password"  ng-model="form.pass" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" type="password" placeholder="Password" class="validate" required>
+               </div>
+            </div>
+
+            <div class="row ">
+               
+                <div class="input-field col s5">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input placeholder="Username"  ng-model="form.name"  id="name"  pattern="[a-z0-9A-Z]{5,}" type="text" class="validate" required>
+                  <label for="name">Name</label>
+               </div>
+
+               <div class="col s1">
+                   <span class="white-text">wdvsd</span>
+               </div>
+               <div class="input-field col s5">    
+                     <i class="material-icons prefix">phone</i>
+                  <label for="password">mobileNo</label>
+                  <input id="password"  ng-model="form.mobileNo" type="number"  min="7000000000" max="9999999999" placeholder="mobile No" class="validate" required>
+               </div>
+            </div>
+
+            <div class="row">
+
+                <div class="input-field col s5">
+                  <i class="material-icons prefix">email</i>
+                      <input placeholder="email"  ng-model="form.emailAddress" id="name" type="email" class="active validate" required>
+                  <label for="name">email</label>
+               </div>
+ 
+
+                <div class="input-field col s1">     
+                        
+               </div>
+               <div class="input-field col s5" style="margin-left:20px;">    
+                     
+                  <label for="address">Address</label>
+                  <input id="address" ng-model="form.address" type="text" placeholder="Address" pattern="[a-z0-9A-Z]{5,}" class="validate" required>
+               </div> 
+
+
+            </div>
+
+             <div class="row">
+
+                 <div class="input-field col s5" style="margin-left:25px; margin-top: -10px;">
+
+                         <input  class="with-gap" ng-model="form.gender"  value="male" name="group1" type="radio" id="test1"  required/>
+                         <label for="test1" class="teal-text" style="font-size: 16px;"> Male</label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <input class="with-gap" ng-model="form.gender" value="female" name="group1" type="radio" id="test2" required />
+                         <label for="test2" class="teal-text" style="font-size: 16px;" >FeMale</label>
+
+                 </div>
+
+
+             </div>
+
+             <div class="row">
+                <div class="col s12 center">
+
+                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                     </button>
+                </div>
+            </div >
+
+
+
+
+
+         </form>
+    </div>
+
+
+
+
+
+</div>
+
+ <!--<form action="#">
+     <p>
+         <input  class="with-gap" name="group1" type="radio" id="test1" />
+         <label for="test1"> Male</label>
+     </p>
+     <p>
+         <input class="with-gap" name="group1" type="radio" id="test2" />
+         <label for="test2">FeMale</label>
+     </p>
+     &lt;!&ndash;
+     <p>
+         <input class="with-gap" name="group1" type="radio" id="test3"  />
+         <label for="test3">Green</label>
+     </p>
+     <p>
+         <input name="group1" type="radio" id="test4" disabled="disabled" />
+         <label for="test4">Brown</label>
+     </p>&ndash;&gt;
+ </form>-->
+
+
+ <!--<div class="input-field col s12">
+     <p>
+         <input id="male" type="radio" name="gender" value="male" checked>
+         <label for="male">Male</label>
+     </p>
+     <p>
+         <input id="female" type="radio" name="gender" value="female" checked>
+         <label for="female">Female</label>
+     </p>
+     <p>
+         <input id="dontknow1" type="radio" name="gender" value="female" disabled>
+         <label for="dontknow1">Don't know (Disabled)</label>
+     </p>
+ </div>-->
+
+
+
+</body>
+</html>

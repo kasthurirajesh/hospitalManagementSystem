@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../css_files/adminDashBoard.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $('.materialboxed').materialbox();
+    });
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+    $('#modal1').modal('open');
+
+
+
+  </script>
+
+</head>
+
+
+
+<body>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="../js/adminDashBoard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+
+
+<body>
+
+<ul id="slide-out" class="side-nav fixed z-depth-2">
+  <li class="center no-padding">
+    <div class="indigo darken-2 white-text" style="height: 128px;">
+      <div class="row">
+        <img style="margin-top: 3%;" width="100" height="100" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" class="circle responsive-img" />
+
+        <p style="margin-top: -11%;">
+          ADMIN
+        </p>
+      </div>
+    </div>
+  </li>
+
+  <li id="dash_dashboard"><a class="waves-light" href="#!"><b>----------Admin Dashboard----------</b></a></li>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    <li id="dash_users">
+      <div id="dash_users_header" class="collapsible-header waves-light" data-collapsible="accordion"><b ng-click ="flag =1">Add Medicine</b></div>
+
+    </li>
+
+    <li id="dash_products">
+      <div id="dash_products_header" class="collapsible-header waves-light"><b ng-click="flag =2 ">Sell Medicine</b></div>
+      <div id="dash_products_body" class="collapsible-body">
+        <ul>
+          <li id="products_product">
+            <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+            <a class="waves-light" style="text-decoration: none;" href="#!">$$</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+</ul>
+
+<header>
+  <ul class="dropdown-content" id="user_dropdown">
+    <li><a class="indigo-text" href="#!">Profile</a></li>
+    <li><a class="indigo-text" href="#!">Logout</a></li>
+  </ul>
+
+  <nav class="indigo" role="navigation">
+    <div class="nav-wrapper">
+      <a data-activates="slide-out" class="button-collapse show-on" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" /></a>
+
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class='material-icons'>account_circle</i></a>
+        </li>
+      </ul>
+
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+
+  <nav>
+    <div class="nav-wrapper indigo darken-2">
+      <a style="margin-left: 20px;" class="breadcrumb" href="#!">Admin</a>
+      <a class="breadcrumb" href="#!">Index</a>
+
+      <div style="margin-right: 20px;" id="timestamp" class="right"></div>
+    </div>
+  </nav>
+</header>
+
+
+<main ng-show=" flag == 1">
+  <div class="row">
+    <div class="col s12">
+      <div class="container" >
+        <h4 class="teal-text">Add Medicine</h4>
+
+        <table class="highlight centered">
+          <thead>
+          <tr>
+            <th>Drug_Name</th>
+            <th>Batch_No</th>
+            <th>Exp_Date</th>
+            <th>price</th>
+            <th>&nbsp;</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><input class="form-control centered" ng-model="meds.name"></td>
+            <td><input class="form-control" ng-model="meds.batchNo"></td>
+            <td><input class="form-control" ng-model="meds.expireDate"></td>
+            <td><input  type="number" class="form-control" ng-model="meds.itemCost"></td>
+            <td><button class="btn btn-primary" ng-click="addmeds()">Add meds</button></td>
+            <!--<td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td> -->
+          </tr>
+         <!-- <tr ng-repeat="meds in medslist">
+            <td>{{meds.drugName}}</td>
+            <td>{{meds.batchNo}}</td>
+            <td>{{meds.expDate}}</td>
+            <td><button class="btn btn-danger" ng-click="remove(meds._id)">Remove</button></td>
+            <td><button class="btn btn-warning" ng-click="edit(meds._id)">Edit</button></td>
+          </tr>-->
+          </tbody>
+        </table>
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+<main ng-show="flag ==2 ">
+  <div class="row">
+    <div class="col s12">
+      <div class="container" >
+        <h1>Sell Medicine</h1>
+
+        <table class="table centered highlighted">
+          <thead>
+          <tr>
+            <th>Patient Id</th>
+            <th>Drug Name</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><input class="form-control" ng-model="medical.patientId"></td>
+            <td><input class="form-control" ng-model="medical.name"></td>
+            <td><input class="form-control" type="number" ng-model="medical.quantity"></td>
+            <td><button class="btn btn-primary" ng-click="sellMedicine()">Buy meds</button></td>
+            <!--<td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td> -->
+          </tr>
+          <tr ng-repeat="meds in medslist">
+            <td>{{meds.patientId}}</td>
+            <td>{{meds.name}}</td>
+            <td>{{meds.quantity}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="col s12 center">
+            <button class="btn waves-effect waves-light teal"   type="submit" name="action"  data-target="modal1">Generate Bill
+
+            </button>
+          </div>
+
+        </div >
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content" style="height: 300px;;">
+    <h4>Bill Details</h4>
+
+    <p style="margin-top: 100px; font-size: 20px;" class="teal-text center">
+      Total Amount :: &nbsp;&nbsp;&nbsp;&nbsp;{{totalPrice}}
+    </p>
+  </div>
+  <div class="modal-footer">
+    <a  class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

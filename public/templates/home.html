@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('.slider').slider({ full_heigt:true});
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+
+<!-- Dropdown Structure -->
+<ul id='demoDropdown' class='dropdown-content' style="margin-top: 60px;">
+    <li><a ng-click="admin()">Admin</a></li>
+    <li><a ng-click="doctor()">Doctor</a></li>
+    <li><a ng-click="nurse()"> Nurse</a></li>
+    <li ><a ng-click="receptionist()">Receptionist</a></li>
+    <li><a ng-click="patient()">Patient</a></li>
+    <li><a ng-click="medical()">medical</a></li>
+
+</ul>
+<nav>
+    <div class="nav-wrapper white">
+        <a href="#" class="brand-logo"> <img style="margin-left:80px;" src="../images/logo-wide.png"> </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"> <span class ="teal-text"> Home</span></a></li>
+            <li><a href="badges.html"> <span class ="teal-text">About </span></a></li>
+            <li><a ng-click="registration()"> <span class ="teal-text">Register </span></a></li>
+
+            <!-- Dropdown Trigger -->
+            <li style="margin-right:90px;">
+                <a class='dropdown-button  teal-text' data-activates='demoDropdown' dropdown data-hover="true">
+                    Log in <i class="material-icons right">arrow_drop_down &nbsp;&nbsp;&nbsp;</i>
+                </a></span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img  style="heigth:700px;"src="../images/1.jpg" >
+            <div class="caption center-align">
+                <h3>We treat you better than anyone else!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+        <li>
+            <img  style="heigth:700px;"src="../images/2.jpg" >
+            <div class="caption left-align">
+                <!--h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5 -->
+            </div>
+        </li>
+        <li>
+            <img  style="heigth:700px;"src="../images/3.jpg" >
+            <div class="caption right-align">
+                <!--h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5 -->
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+

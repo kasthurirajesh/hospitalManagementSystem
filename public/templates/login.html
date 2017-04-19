@@ -1,0 +1,165 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>    
+
+<script type="text/javascript">
+
+/*
+ $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+*/
+
+ $(document).ready(function() {
+   $('select').material_select();
+ });
+
+
+
+</script>
+
+</head>
+<body>
+
+  <nav style="margin-top:15px;">
+  <div class="nav-wrapper white">
+    <a href="#" class="brand-logo"> <img style="margin-left:80px;" src="../images/logo-wide.png"> </a>
+    <ul class="right hide-on-med-and-down">
+     <!-- <li><a href="sass.html"> <span class ="teal-text"> Home</span></a></li>
+        <li style="margin-right:100px;"><a href="badges.html"> <span class ="teal-text">About </span></a></li>-->
+    </ul>
+  </div>
+</nav>
+
+
+<div style="height:590px;">
+  <div class="row">
+
+
+    <div class="col s3 white-test">
+        <span class="white-text"> csafs</span>
+      </div>
+
+    <div class="col s6">
+           <br><br><br>
+          <div class="row card-panel">
+              <form class="col s12" ng-submit="submit()">
+
+                  <div class="row">
+                   <div class="input-field col s12">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input placeholder="Username"  ng-model="form.userId" id="name"  pattern="[a-zA-Z0-9]{6,}" type="text" class="active validate" required>
+                      <label for="name">Username</label>
+                   </div>
+                 </div>
+
+
+
+                  <div class="row">
+
+                   <div class="input-field col s12 ">     
+                      <i class="material-icons prefix">lock-outline</i>
+                      <label for="password">Password</label>
+                      <input id="password"  ng-model="form.password" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" placeholder="Password" class="validate" required>
+                   </div>
+                 </div>
+
+
+
+                  <!--<div class="input-field col s10" style="margin-left:25px;">
+
+                      &lt;!&ndash;<select ng-model="form.value" ng-options="x for x in arr">
+                      </select>&ndash;&gt;
+                      {{form.value}}
+
+                     &lt;!&ndash; <select style=" !important;" ng-model="form.value">
+                          <option value="" disabled selected>- Select Your Services -</option>
+                          <option   ng-click="position(1)" value="Orthopaedics" ng-click="position(1)" >Orthopaedics</option>
+                          <option ng-click="position(2)" value="Neurology" ng-click="position(2)">Neurology</option>
+                          <option value="Cardiology">Cardiology</option>
+                          <option value="Dental">Dental</option>
+                          <option value="Haematology">Haematology</option>
+                          <option value="Blood Test">Blood Test</option>
+                          <option value="Emergency Care">Emergency Care</option>
+                          <option value="Outdoor Checkup">Outdoor Checkup</option>
+                          <option value="Cancer Service">Cancer Service</option>
+                          <option value="Pharmacy">Pharmacy</option>
+                        </select>&ndash;&gt;
+
+                      <select size="6" name="ngvalueselect" ng-model="form.value" multiple>
+                          <option ng-repeat="option in arr" ng-value="option">{{option}}</option>
+                      </select>
+
+                      {{ form.value}} ll ;;
+                      <label>Select Your Services</label>
+                  </div>-->
+
+
+
+
+
+                 <div class="row">
+                      <div class="col s12 center">
+                            <button class="btn waves-effect waves-light pink" type="submit" name="action">Submit
+                                        <i class="material-icons right">send</i>
+                            </button>
+                      </div>
+                      <div class="col s6">
+                        <p > <a href="#"> <SPAN style="color:rgb(0,188,212);"> Forgot Password</SPAN> </a> </p> 
+                        </div>
+
+
+                     <br><br><br>
+
+
+
+
+
+                  </div >
+                
+
+
+
+
+
+               </form>
+          </div>        
+
+
+         </div>
+
+<!-- second  -->
+    <!--div class="col s6">
+        <div class="row">
+          <div class="s4 card-panel">
+                        <img  src="../images/login-image.jpg"  style="width:600;">
+
+          </div>
+
+        </div>
+    </div-->
+
+    </div>
+    
+
+
+
+   </div> 
+
+   
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
